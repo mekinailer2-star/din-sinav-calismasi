@@ -139,17 +139,28 @@ function initQuestions() {
 
     cards.forEach(card => {
         const btn = card.querySelector('.question-toggle');
+        const answer = card.querySelector('.question-answer');
         btn.addEventListener('click', () => {
             card.classList.toggle('revealed');
             const span = btn.querySelector('span:first-child');
             if (card.classList.contains('revealed')) {
-                span.textContent = 'Tamam';
+                span.textContent = 'Gizle';
                 card.style.borderColor = 'var(--accent)';
                 card.style.background = 'var(--accent-bg)';
+                if (answer) {
+                    answer.style.paddingTop = '1rem';
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    answer.style.opacity = '1';
+                }
             } else {
                 span.textContent = 'Düşün';
                 card.style.borderColor = '';
                 card.style.background = '';
+                if (answer) {
+                    answer.style.maxHeight = '0';
+                    answer.style.opacity = '0';
+                    answer.style.paddingTop = '0';
+                }
             }
         });
     });

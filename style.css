@@ -903,6 +903,7 @@ ul {
 .question-card {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 16px;
     padding: 18px 24px;
     background: var(--bg-card);
@@ -966,6 +967,61 @@ ul {
 
 .question-card.revealed .toggle-icon {
     transform: rotate(90deg);
+}
+
+.question-answer {
+    width: 100%;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.3s ease, padding-top 0.3s ease;
+    padding-top: 0;
+    border-top: none;
+}
+
+.question-card.revealed .question-answer {
+    border-top: 1px solid var(--border);
+    margin-top: 12px;
+}
+
+.question-answer p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 8px;
+}
+
+.question-answer p:last-child {
+    margin-bottom: 0;
+}
+
+.question-answer ul {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.question-answer ul li {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    padding-left: 16px;
+    position: relative;
+}
+
+.question-answer ul li::before {
+    content: '\2022';
+    color: var(--accent);
+    font-weight: 700;
+    position: absolute;
+    left: 0;
+}
+
+.question-answer strong {
+    color: var(--text-primary);
 }
 
 /* ==========================================
