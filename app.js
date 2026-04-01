@@ -147,7 +147,7 @@ function initQuestions() {
                 card.style.borderColor = 'var(--accent)';
                 card.style.background = 'var(--accent-bg)';
             } else {
-                span.textContent = 'Dusun';
+                span.textContent = 'Düşün';
                 card.style.borderColor = '';
                 card.style.background = '';
             }
