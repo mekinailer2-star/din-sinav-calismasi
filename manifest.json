@@ -1,7 +1,7 @@
 {
-    "name": "Din Kulturu ve Ahlak Bilgisi - Sinav Calismasi",
-    "short_name": "Din Kulturu",
-    "description": "12. Sinif 2. Donem 1. Yazili - Din Kulturu ve Ahlak Bilgisi Sinav Calismasi Notlari",
+    "name": "Din Kültürü ve Ahlak Bilgisi - Sınav Çalışması",
+    "short_name": "Din Kültürü",
+    "description": "12. Sınıf 2. Dönem 1. Yazılı - Din Kültürü ve Ahlak Bilgisi Sınav Çalışması Notları",
     "start_url": "/din-sinav-calismasi/",
     "scope": "/din-sinav-calismasi/",
     "display": "standalone",
