@@ -1,0 +1,1211 @@
+/* ==========================================
+   Din Kulturu ve Ahlak Bilgisi - Premium Style
+   ========================================== */
+
+/* CSS Variables - Light Theme */
+:root {
+    --bg-primary: #f8f9fc;
+    --bg-secondary: #ffffff;
+    --bg-tertiary: #f0f2f8;
+    --bg-card: #ffffff;
+    --bg-card-hover: #f5f7ff;
+    --text-primary: #1a1a2e;
+    --text-secondary: #4a4a6a;
+    --text-muted: #8888a8;
+    --accent: #4f46e5;
+    --accent-light: #818cf8;
+    --accent-bg: rgba(79, 70, 229, 0.08);
+    --accent-bg-hover: rgba(79, 70, 229, 0.14);
+    --gradient-start: #4f46e5;
+    --gradient-end: #7c3aed;
+    --border: rgba(0, 0, 0, 0.08);
+    --border-strong: rgba(0, 0, 0, 0.15);
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.12);
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --quran-bg: linear-gradient(135deg, #fef3c7, #fde68a);
+    --quran-text: #92400e;
+    --quran-border: #f59e0b;
+    --hero-overlay: rgba(26, 26, 46, 0.85);
+    --nav-bg: rgba(255, 255, 255, 0.9);
+    --nav-shadow: 0 1px 10px rgba(0, 0, 0, 0.06);
+    --footer-bg: #1a1a2e;
+    --footer-text: #a0a0c0;
+    --kazanim-gradient: linear-gradient(135deg, #4f46e5, #7c3aed);
+    --info-icon-bg: rgba(79, 70, 229, 0.1);
+    --highlight-bg: linear-gradient(135deg, rgba(79, 70, 229, 0.05), rgba(124, 58, 237, 0.05));
+    --progress-bg: rgba(79, 70, 229, 0.1);
+    --scrollbar-track: #f0f0f5;
+    --scrollbar-thumb: #c0c0d0;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+    --bg-primary: #0f0f1a;
+    --bg-secondary: #1a1a2e;
+    --bg-tertiary: #16162a;
+    --bg-card: #1e1e36;
+    --bg-card-hover: #252545;
+    --text-primary: #e8e8f0;
+    --text-secondary: #b0b0cc;
+    --text-muted: #7878a0;
+    --accent: #818cf8;
+    --accent-light: #a5b4fc;
+    --accent-bg: rgba(129, 140, 248, 0.12);
+    --accent-bg-hover: rgba(129, 140, 248, 0.2);
+    --border: rgba(255, 255, 255, 0.08);
+    --border-strong: rgba(255, 255, 255, 0.15);
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.5);
+    --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.6);
+    --quran-bg: linear-gradient(135deg, #422006, #78350f);
+    --quran-text: #fde68a;
+    --quran-border: #d97706;
+    --hero-overlay: rgba(15, 15, 26, 0.9);
+    --nav-bg: rgba(15, 15, 26, 0.95);
+    --nav-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+    --footer-bg: #0a0a14;
+    --footer-text: #7878a0;
+    --kazanim-gradient: linear-gradient(135deg, #6366f1, #8b5cf6);
+    --info-icon-bg: rgba(129, 140, 248, 0.15);
+    --highlight-bg: linear-gradient(135deg, rgba(129, 140, 248, 0.08), rgba(139, 92, 246, 0.08));
+    --progress-bg: rgba(129, 140, 248, 0.15);
+    --scrollbar-track: #1a1a2e;
+    --scrollbar-thumb: #3a3a5e;
+}
+
+/* ==========================================
+   Base & Reset
+   ========================================== */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.7;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 4px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent);
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--accent-light);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ==========================================
+   Container
+   ========================================== */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==========================================
+   Theme Toggle
+   ========================================== */
+.theme-toggle {
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    z-index: 1000;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 2px solid var(--border-strong);
+    background: var(--bg-card);
+    color: var(--text-primary);
+    font-size: 1.4rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-lg);
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-xl);
+}
+
+.theme-icon {
+    transition: transform 0.3s ease;
+}
+
+[data-theme="dark"] .theme-icon {
+    transform: rotate(180deg);
+}
+
+/* ==========================================
+   Navbar
+   ========================================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 900;
+    background: var(--nav-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: var(--nav-shadow);
+    transition: all 0.3s ease;
+    transform: translateY(-100%);
+}
+
+.navbar.visible {
+    transform: translateY(0);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--text-primary);
+}
+
+.logo-icon {
+    font-size: 1.3rem;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2.5px;
+    background: var(--text-primary);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.nav-link {
+    padding: 8px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: var(--accent-bg);
+    color: var(--accent);
+}
+
+/* Mobile Nav */
+@media (max-width: 900px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: var(--bg-secondary);
+        flex-direction: column;
+        padding: 16px 20px;
+        gap: 4px;
+        box-shadow: var(--shadow-lg);
+        transform: translateY(-120%);
+        transition: transform 0.3s ease;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .nav-menu.open {
+        transform: translateY(0);
+    }
+
+    .nav-link {
+        width: 100%;
+        padding: 12px 16px;
+    }
+}
+
+/* ==========================================
+   Hero
+   ========================================== */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 20% 50%, rgba(79, 70, 229, 0.2) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 50%, rgba(124, 58, 237, 0.15) 0%, transparent 60%),
+        radial-gradient(ellipse at 50% 0%, rgba(99, 102, 241, 0.1) 0%, transparent 50%);
+    animation: heroGlow 8s ease-in-out infinite alternate;
+}
+
+@keyframes heroGlow {
+    0% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 40px 20px;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 28px;
+    backdrop-filter: blur(10px);
+}
+
+.hero-title {
+    font-size: clamp(2.2rem, 6vw, 4rem);
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-number {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.55);
+    margin-top: 6px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 32px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(79, 70, 229, 0.4);
+}
+
+.hero-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 30px rgba(79, 70, 229, 0.5);
+    color: #ffffff;
+}
+
+/* ==========================================
+   Sections
+   ========================================== */
+.section {
+    padding: 80px 0;
+}
+
+.section-alt {
+    background: var(--bg-tertiary);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.section-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 50px;
+    background: var(--accent-bg);
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.section-title {
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    letter-spacing: -0.3px;
+}
+
+.section-desc {
+    font-size: 1rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   Kazanim Cards
+   ========================================== */
+.kazanim-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 16px;
+}
+
+.kazanim-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.kazanim-card:hover {
+    background: var(--bg-card-hover);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.kazanim-number {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--kazanim-gradient);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.kazanim-content p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.kazanim-soru {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 50px;
+    background: var(--accent-bg);
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* ==========================================
+   Content Cards
+   ========================================== */
+.content-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    margin-bottom: 24px;
+    transition: all 0.3s ease;
+}
+
+.content-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.content-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.content-card p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.content-card p:last-child {
+    margin-bottom: 0;
+}
+
+.featured-card {
+    position: relative;
+    border-left: 4px solid var(--accent);
+    padding-left: 36px;
+}
+
+.card-icon {
+    position: absolute;
+    top: -12px;
+    right: 24px;
+    width: 40px;
+    height: 40px;
+    background: var(--kazanim-gradient);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.highlight-card {
+    background: var(--highlight-bg);
+    border-color: var(--accent);
+}
+
+.dual-card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+@media (max-width: 768px) {
+    .dual-card-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Feature List */
+.feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    padding: 8px 12px;
+    border-radius: var(--radius-sm);
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    transition: all 0.2s ease;
+}
+
+.feature-list li:hover {
+    background: var(--accent-bg);
+    transform: translateX(4px);
+}
+
+.list-icon {
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+/* ==========================================
+   Kavram Cards
+   ========================================== */
+.kavram-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.kavram-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    transition: all 0.3s ease;
+}
+
+.kavram-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.kavram-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.kavram-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--accent-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.kavram-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.kavram-card p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+/* ==========================================
+   Accordion
+   ========================================== */
+.accordion-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.accordion-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.accordion-item:hover {
+    box-shadow: var(--shadow-sm);
+}
+
+.accordion-item.active {
+    border-color: var(--accent);
+    box-shadow: var(--shadow-md);
+}
+
+.accordion-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: inherit;
+    transition: background 0.2s ease;
+}
+
+.accordion-header:hover {
+    background: var(--accent-bg);
+}
+
+.accordion-icon {
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.accordion-title {
+    flex: 1;
+}
+
+.accordion-arrow {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    transition: transform 0.3s ease;
+}
+
+.accordion-item.active .accordion-arrow {
+    transform: rotate(180deg);
+    color: var(--accent);
+}
+
+.accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    padding: 0 24px;
+}
+
+.accordion-item.active .accordion-body {
+    max-height: 500px;
+    padding: 0 24px 20px;
+}
+
+.accordion-body p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.accordion-body p:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================================
+   Quran Card
+   ========================================== */
+.quran-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.quran-header {
+    padding: 16px 32px;
+    background: var(--quran-bg);
+    border-bottom: 2px solid var(--quran-border);
+}
+
+.quran-badge {
+    font-weight: 700;
+    color: var(--quran-text);
+    font-size: 0.95rem;
+}
+
+.quran-verse {
+    padding: 32px;
+    font-family: 'Amiri', serif;
+    font-size: 1.25rem;
+    line-height: 2;
+    color: var(--text-primary);
+    font-weight: 700;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+}
+
+.quran-verse::before,
+.quran-verse::after {
+    font-size: 3rem;
+    color: var(--accent);
+    opacity: 0.3;
+    position: absolute;
+    font-family: serif;
+}
+
+.quran-verse::before {
+    content: "\201C";
+    top: 10px;
+    left: 20px;
+}
+
+.quran-verse::after {
+    content: "\201D";
+    bottom: 10px;
+    right: 20px;
+}
+
+.quran-explanation {
+    padding: 28px 32px;
+}
+
+.quran-explanation h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+}
+
+.quran-explanation p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+/* ==========================================
+   Info Cards (Iktisadi)
+   ========================================== */
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.info-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.info-card.full-width {
+    grid-column: 1 / -1;
+}
+
+.info-icon {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--info-icon-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+}
+
+.info-card p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .info-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================
+   Questions Section
+   ========================================== */
+.questions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.question-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 24px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    transition: all 0.3s ease;
+}
+
+.question-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateX(4px);
+    border-color: var(--accent);
+}
+
+.question-number {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--kazanim-gradient);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.question-text {
+    flex: 1;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.question-toggle {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: 50px;
+    border: 1px solid var(--border);
+    background: var(--accent-bg);
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s ease;
+}
+
+.question-toggle:hover {
+    background: var(--accent-bg-hover);
+}
+
+.toggle-icon {
+    font-size: 0.6rem;
+    transition: transform 0.3s ease;
+}
+
+.question-card.revealed .toggle-icon {
+    transform: rotate(90deg);
+}
+
+/* ==========================================
+   Progress Bar
+   ========================================== */
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--progress-bg);
+    z-index: 1001;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    transition: width 0.1s linear;
+    border-radius: 0 2px 2px 0;
+}
+
+/* ==========================================
+   Back to Top
+   ========================================== */
+.back-to-top {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 1000;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(79, 70, 229, 0.5);
+}
+
+/* ==========================================
+   Footer
+   ========================================== */
+.footer {
+    background: var(--footer-bg);
+    padding: 48px 0 32px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.footer-logo {
+    font-size: 1.4rem;
+}
+
+.footer-text {
+    color: var(--footer-text);
+    font-size: 0.9rem;
+}
+
+.footer-divider {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    border-radius: 2px;
+    margin: 8px 0;
+}
+
+.footer-credit {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.footer-year {
+    color: var(--footer-text);
+    font-size: 0.85rem;
+}
+
+/* ==========================================
+   Animations
+   ========================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-in {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.animate-delay-1 { animation-delay: 0.1s; }
+.animate-delay-2 { animation-delay: 0.2s; }
+.animate-delay-3 { animation-delay: 0.3s; }
+
+/* ==========================================
+   Responsive
+   ========================================== */
+@media (max-width: 640px) {
+    .section {
+        padding: 56px 0;
+    }
+
+    .hero-stats {
+        gap: 24px;
+    }
+
+    .stat-number {
+        font-size: 1.8rem;
+    }
+
+    .kazanim-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .kavram-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .content-card {
+        padding: 20px;
+    }
+
+    .quran-verse {
+        padding: 24px 20px;
+        font-size: 1.1rem;
+    }
+
+    .quran-explanation {
+        padding: 20px;
+    }
+
+    .question-card {
+        flex-wrap: wrap;
+        padding: 16px;
+    }
+
+    .question-toggle {
+        margin-left: auto;
+    }
+
+    .accordion-header {
+        padding: 16px 18px;
+    }
+
+    .theme-toggle {
+        bottom: 16px;
+        left: 16px;
+        width: 46px;
+        height: 46px;
+    }
+
+    .back-to-top {
+        bottom: 16px;
+        right: 16px;
+        width: 44px;
+        height: 44px;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
+    }
+
+    .hero-stats {
+        flex-wrap: wrap;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .theme-toggle,
+    .back-to-top,
+    .progress-bar,
+    .hero-btn,
+    .question-toggle,
+    .nav-toggle {
+        display: none !important;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 40px 20px;
+        background: #1a1a2e !important;
+        color: #fff;
+    }
+
+    .section {
+        padding: 30px 0;
+        break-inside: avoid;
+    }
+
+    body {
+        font-size: 12pt;
+    }
+}
