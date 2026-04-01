@@ -971,17 +971,23 @@ ul {
 
 .question-answer {
     width: 100%;
-    max-height: 0;
+    display: grid;
+    grid-template-rows: 0fr;
     opacity: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease, opacity 0.3s ease, padding-top 0.3s ease;
-    padding-top: 0;
+    transition: grid-template-rows 0.4s ease, opacity 0.3s ease;
     border-top: none;
 }
 
+.question-answer > * {
+    overflow: hidden;
+}
+
 .question-card.revealed .question-answer {
+    grid-template-rows: 1fr;
+    opacity: 1;
     border-top: 1px solid var(--border);
     margin-top: 12px;
+    padding-top: 1rem;
 }
 
 .question-answer p {
