@@ -148,9 +148,9 @@ function initQuestions() {
                 card.style.borderColor = 'var(--accent)';
                 card.style.background = 'var(--accent-bg)';
                 if (answer) {
+                    answer.style.paddingTop = '1rem';
                     answer.style.maxHeight = answer.scrollHeight + 'px';
                     answer.style.opacity = '1';
-                    answer.style.paddingTop = '1rem';
                 }
             } else {
                 span.textContent = 'Düşün';
